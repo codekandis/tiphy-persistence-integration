@@ -32,7 +32,7 @@ class PersistenceConfiguration extends AbstractConfiguration implements Persiste
 	 */
 	public function getPort(): ?int
 	{
-		return $this->readOrDefault( 'port', null );
+		return $this->readOrDefault( null, 'port' );
 	}
 
 	/**
@@ -64,6 +64,6 @@ class PersistenceConfiguration extends AbstractConfiguration implements Persiste
 	 */
 	public function getAttributes(): array
 	{
-		return $this->readOrDefault( 'attributes', [] );
+		return $this->readOrDefault( [], 'attributes' );
 	}
 }
